@@ -1,6 +1,7 @@
 body {
     margin: 0;
-
+    background-color: linen;
+    height: 100%;
 }
 
 
@@ -24,7 +25,6 @@ body {
 
 .buttonscontainer {
     display: flex;
-    text-decoration: underline;
     gap: 30px;
 }
 
@@ -63,3 +63,60 @@ body {
     color: white;
     width: 40%;
 }
+
+.boxes {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid green;
+}
+
+
+
+.boxes .maincontainer {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    top: 50%;
+    left: 50%;
+    border: 2px solid red;
+
+}
+
+.card {
+    position: relative;
+    width: 25%;
+    height: 25%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border: 2px solid rgb(95, 25, 0);
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: blue;
+    color: black;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: purple;
+    color: white;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
+/* transform: translate(-50%, -50%); */
