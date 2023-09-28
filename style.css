@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: lightgrey;
+    background-color: #ec3f95;
 }
 
 /* Header */
@@ -9,8 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1%;
-    border: solid 1px red;
-
+    background-color: #3fb5ec;
 }
 
 header li {
@@ -30,15 +29,19 @@ header ul li a {
     background-color: black;
     color: white;
 }
-
+h1{
+    color: rgb(255, 0, 255);
+    font-size: 70px;
+    text-shadow: -1px 1px 7px rgb(252, 235, 0);
+}
 
 /* MAIN */
 
 
 main {
-    border: solid 1px green;
     display: flex;
     flex-direction: column;
+    box-shadow: 3px 1px 31px 15px rgb(16, 19, 18) inset;
 
 }
 
@@ -46,9 +49,8 @@ main {
 
 
 h2 {
-    border: solid 1px black;
     text-align: center;
-
+    background-color: #9bf889;
 
 }
 
@@ -56,7 +58,6 @@ h2 {
 
 
 .cards {
-    border: solid 1px blueviolet;
     display: flex;
     margin: 3rem;
     gap: 2rem;
@@ -66,13 +67,13 @@ h2 {
 
 /* Toutes les cartes  */
 .card {
-    border: solid 2px orange;
     position: relative;
     width: 400px;
     height: 400px;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
     box-shadow: 0 0 1rem 0 #17132C
+    
 }
 
 .front {
@@ -86,6 +87,7 @@ h2 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
 }
 
 
@@ -100,7 +102,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     transform: rotateY(180deg);
-    background: linear-gradient(to top, red, green);
+    background: linear-gradient(to top, rgb(255, 251, 0), #9bf889);
 }
 
 .flipCard {
@@ -112,10 +114,15 @@ h2 {
 
 .add-card {
     width: 50%;
-    height: 50px;
+    height: 70px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
+    color: rgb(255, 0, 255);
+    font-size: 50px;
+    background-color: #3fb5ec;
+    text-shadow: -1px 1px 7px rgb(252, 235, 0);
+    box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
 }
 
 /* Explications Fonctionement carte  */
@@ -124,6 +131,7 @@ article {
     border: solid 1px red;
     text-align: center;
     padding: 2%;
+    background-color: #9bf889;
 }
 
 
@@ -149,7 +157,9 @@ footer li {
 
 footer ul li a {
     text-decoration: none;
-    color: black;
+    color: #3fb5ec;
+    font-size: 30px;
+    text-shadow: -1px 1px 7px rgb(252, 235, 0);
 
 }
 
@@ -157,5 +167,10 @@ footer ul li a {
 
 .dark-mode {
     margin: 2%;
-
+    width: 10%;
+    height: 30px;
+    font-size: 20px;
+    box-shadow: 1px 1px 170px 48px rgba(0,0,0,1);
+    text-shadow: 0px 0px 5px rgba(255,0,0,1);
+    background-color: rgba(145, 142, 142, 0.966);
 }
