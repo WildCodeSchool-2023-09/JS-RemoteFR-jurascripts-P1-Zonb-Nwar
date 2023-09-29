@@ -5,4 +5,7 @@ cards.forEach((card) => {
         card.classList.toggle("flipCard")
     }
 })
+const alertUser = (text) => {
+    alert(text)
 
+}
