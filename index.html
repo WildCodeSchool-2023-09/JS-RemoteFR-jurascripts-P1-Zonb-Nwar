@@ -27,9 +27,9 @@
             <h5>Book Wilders</h5>
             <ul>
                 <li> <a href="#">Home</a> </li>
-                <li> <a href="#">Email</a> </li>
-                <li> <a href="#">Text</a> </li>
-                <li> <a href="#">Wild</a> </li>
+                <li> <a href="#">Les Wilders</a> </li>
+                <li> <a href="#">En savoir +</a> </li>
+                <li> <a href="#">Contact</a> </li>
             </ul>
         </nav>
     </label>
@@ -38,12 +38,12 @@
         <h1>Book des Wilders </h1>
 
  
-        <button class="connexion" onClick="alertUser('Vous navez pas le droit de vous connecter')"> Connexion</button>
-
+        <button class="connexion" onClick="alertUser('Vous navez pas le droit de vous connecter')">
         <div>
             <img class="login" src="https://png2.cleanpng.com/sh/f21aa1a65b11ccd28556cae12cfb5425/L0KzQYm3VcE3N5tBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfdwd5hxfZ9qY3PyhbB7Tflkd58yfNd8aXfxPb32hBlvNWZmftU5MnTkdLa6UcI0Nmk4T6QAN0S1QYa5VsQ3PWM5Sqs6MEGxgLBu/kisspng-computer-icons-google-account-icon-design-login-5afc02dade3123.8372574215264652429101.png">
         </div>
-     
+
+    </button>
 
     </header>
 
@@ -108,8 +108,7 @@
 
         </section>
 
-        <button class="add-card" onClick="alertUser('vous navez pas accès a ce contenu, FUYEZ !')">Ajouter votre carte
-            !</button>
+        <button class="add-card">Ajouter votre carte !</button>
 
         <article> Explication pour créer une carte : <br>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -127,7 +126,13 @@
             <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
         </ul>
 
-        <button class="dark-mode"> Dark Mode </button>
+        <div class="wrapper">
+            <label class="darkmode-toggle" for="toggle-checkbox">
+              <span class="visually-hidden">Enable dark mode</span>
+              <input type="checkbox" id="toggle-checkbox" />
+              <span class="toggle-slider" aria-hidden="true"></span>
+            </label>
+          </div>
 
     </footer>
     <script src="script.js"></script>
