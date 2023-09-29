@@ -1,15 +1,157 @@
+
 body {
     margin: 0;
     background-color: #ec3f95;
+    height: 100%;
+
 }
 
 /* Header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 1%;
     background-color: #3fb5ec;
+    padding: 1%;
+}
+
+/* Titre principal   */
+
+h1{
+    border: solid 1px red;
+    color: rgb(255, 0, 255);
+    font-size: 2rem;
+    text-shadow: -1px 1px 7px rgb(252, 235, 0);
+    text-align: center;
+    width: 50%;
+    grid-column: 2;
+   
+}
+
+
+/* menu burger */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+  display: block;
+  height: 3rem;
+  width: 30vw;
+  background: #ec3f95;
+  margin: 0px;  
+  z-index: 9;
+}
+
+#main-menu ul {
+  width: 30vw;
+  height: 5vh;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #B9FAF8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(
+      to bottom, 
+      #ec3f95, #ec3f95 20%, 
+      #3fb5ec 20%, #3fb5ec 40%, 
+      #ec3f95 40%, #ec3f95 60%, 
+      #3fb5ec 60%, #3fb5ec 80%, 
+      #ec3f95 80%, #ec3f95 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #ec3f95;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h5 {
+  color: #B9FAF8;
+  font-size: 3rem;
+  padding-left: 1.rem;
+  
+}
+
+#hamburger-menu ul {
+  padding-left: 3.5rem;
+  }
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #B9FAF8;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+   visibility: visible;
+   left: 0;
+}
+#hamburger-input:checked ~ .overlay {
+  visibility: visible;
+  opacity: 0.4;
 }
 
 header li {
@@ -17,22 +159,20 @@ header li {
 }
 
 header ul li a {
+
     text-decoration: none;
     color: black;
+    font-size: x-small;
 }
 
-.connexion {
-    border-radius: 25px;
-    width: 80px;
-    height: 40px;
-    border-radius: 60px / 40px;
-    background-color: black;
-    color: white;
-}
-h1{
-    color: rgb(255, 0, 255);
-    font-size: 70px;
-    text-shadow: -1px 1px 7px rgb(252, 235, 0);
+/* bouton connexion  */
+
+
+header .login{
+    grid-column: 3;
+    place-content: center ;
+    width: 10%;
+    height: auto;
 }
 
 /* MAIN */
@@ -51,6 +191,8 @@ main {
 h2 {
     text-align: center;
     background-color: #9bf889;
+    font-size: 1rem;
+    border-radius: 1rem;
 
 }
 
@@ -72,7 +214,8 @@ h2 {
     height: 400px;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    box-shadow: 0 0 1rem 0 #17132C
+    box-shadow: 0 0 1rem 0 #17132C;
+    border-radius: 0.5rem;
     
 }
 
@@ -113,13 +256,13 @@ h2 {
 /* Bouton d'ajout de carte  */
 
 .add-card {
-    width: 50%;
-    height: 70px;
+    width: 50vw;
+    height: 10vh;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     color: rgb(255, 0, 255);
-    font-size: 50px;
+    font-size: 5vw;
     background-color: #3fb5ec;
     text-shadow: -1px 1px 7px rgb(252, 235, 0);
     box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
@@ -138,39 +281,45 @@ article {
 /* Footer */
 
 footer {
-    border: solid 2px rgb(9, 82, 171);
     display: flex;
-    justify-content: space-between;
 }
 
 footer ul {
     display: flex;
-    gap: 2%;
 
 }
 
 footer li {
     border: solid 1px red;
-    justify-content: space-around;
     list-style-type: none;
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: #3fb5ec;
-    font-size: 30px;
-    text-shadow: -1px 1px 7px rgb(252, 235, 0);
-
+.star{
+    
+    width: 60%;
 }
+
+
 
 /* bouton Dark Mode */
 
 .dark-mode {
-    margin: 2%;
-    width: 10%;
-    height: 30px;
-    font-size: 20px;
+    margin: 5%;
+    width: 20%;
+    height: 15%;
+    border-radius: 12px;
+    font-size: 1rem;
     box-shadow: 1px 1px 170px 48px rgba(0,0,0,1);
     text-shadow: 0px 0px 5px rgba(255,0,0,1);
-    background-color: rgba(145, 142, 142, 0.966);
+    background-color: rgba(130, 123, 123, 0.966);
+}
+
+
+@media screen and (max-width: 750px) {
+  #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
 }
