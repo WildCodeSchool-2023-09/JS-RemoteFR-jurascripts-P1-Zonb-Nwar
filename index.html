@@ -11,8 +11,20 @@
 
 <body>
     <header>
-        <nav class="menu">
-            <button>Menu</button>
+        
+        <nav id="main-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Text</a></li>
+              <li><a href="#">Wild</a></li>
+            </ul>
+          </nav>
+
+        <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu">
+            <h5>Book Wilders</h5>
             <ul>
                 <li> <a href="#">Home</a> </li>
                 <li> <a href="#">Email</a> </li>
@@ -20,10 +32,14 @@
                 <li> <a href="#">Wild</a> </li>
             </ul>
         </nav>
+    </label>
+    <div class="overlay"></div>
 
         <h1>Book des Wilders </h1>
 
-        <button class="connexion"> Connexion</button>
+        <div>
+            <img class="login" src="https://png2.cleanpng.com/sh/f21aa1a65b11ccd28556cae12cfb5425/L0KzQYm3VcE3N5tBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfdwd5hxfZ9qY3PyhbB7Tflkd58yfNd8aXfxPb32hBlvNWZmftU5MnTkdLa6UcI0Nmk4T6QAN0S1QYa5VsQ3PWM5Sqs6MEGxgLBu/kisspng-computer-icons-google-account-icon-design-login-5afc02dade3123.8372574215264652429101.png">
+        </div>
 
     </header>
 
@@ -100,10 +116,10 @@
 
     <footer>
         <ul>
-            <li> <a href="#">etoile1</a> </li>
-            <li> <a href="#">etoile2</a> </li>
-            <li> <a href="#">etoile3</a> </li>
-            <li> <a href="#">etoile4</a> </li>
+            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
+            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
+            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
+            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
         </ul>
 
         <button class="dark-mode"> Dark Mode </button>
