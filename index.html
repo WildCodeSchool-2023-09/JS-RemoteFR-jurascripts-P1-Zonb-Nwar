@@ -11,46 +11,48 @@
 
 <body>
     <header>
-        
+
         <nav id="main-menu">
             <ul>
-              <li><a href="#">Principal</a></li>
-              <li><a href="#">Les Wilders</a></li>
-              <li><a href="#">En savoir +</a></li>
-              <li><a href="#">Contact</a></li>
+                <li><a href="#home">Acceuil</a></li>
+                <li><a href="#wilder">Les Wilders</a></li>
+                <li><a href="#explanations">En savoir +</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
+
         <input type="checkbox" id="hamburger-input" class="burger-shower" />
         <label id="hamburger-menu" for="hamburger-input">
             <nav id="sidebar-menu">
-                <h5>Book Wilders</h5>
+                <h5>Book des Wilders</h5>
                 <ul>
-                    <li> <a href="#">Principal</a> </li>
-                    <li> <a href="#">Les Wilders</a> </li>
-                    <li> <a href="#">En savoir +</a> </li>
-                    <li> <a href="#">Contact</a> </li>
+                    <li> <a href="#home">Accueil</a> </li>
+                    <li> <a href="#wilder">Les Wilders</a> </li>
+                    <li> <a href="#explanations">En savoir +</a> </li>
+                    <li> <a href="#contact">Contact</a> </li>
                 </ul>
             </nav>
         </label>
         <div class="overlay"></div>
-        
-        <h1>Book des Wilders </h1>
-        
+
+        <h1 id="home">Book des Wilders </h1>
+
         <div class="wrapper">
             <label class="darkmode-toggle" for="toggle-checkbox">
-              <span class="visually-hidden">Enable dark mode</span>
-              <input type="checkbox" id="toggle-checkbox" />
-              <span class="toggle-slider" aria-hidden="true"></span>
+                <span class="visually-hidden">Enable dark mode</span>
+                <input type="checkbox" id="toggle-checkbox" />
+                <span class="toggle-slider" aria-hidden="true"></span>
             </label>
-          </div>
-        
-        <button class="connexion" onClick="alertUser('Vous ne pouvez pas vous connecter sans avoir créé un compte !')">
-        <div>
-            <img class="login" src="https://png2.cleanpng.com/sh/f21aa1a65b11ccd28556cae12cfb5425/L0KzQYm3VcE3N5tBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfdwd5hxfZ9qY3PyhbB7Tflkd58yfNd8aXfxPb32hBlvNWZmftU5MnTkdLa6UcI0Nmk4T6QAN0S1QYa5VsQ3PWM5Sqs6MEGxgLBu/kisspng-computer-icons-google-account-icon-design-login-5afc02dade3123.8372574215264652429101.png">
         </div>
 
-    </button>
+        <button class="connexion" onClick="alertUser('Vous ne pouvez pas vous connecter sans avoir créé un compte !')">
+            <div>
+                <img class="login"
+                    src="https://png2.cleanpng.com/sh/d9976ed8118c405387df8c11d00e0eda/L0KzQYm3VMAyN6psfZH0aYP2gLBuTgV0baMyiOR4ZnnvdX7qjB1xfaVqip9yY3Bxg373kv9ncZ1qRadqY0C8QoW8UsZkbJI7RqMCMkC4RIKBUcUzOmY7UakEN0G4SXB3jvc=/kisspng-user-profile-computer-icons-profile-5ac0924526cda6.172054181522569797159.png"
+                    alt="login">
+            </div>
+
+        </button>
 
     </header>
 
@@ -58,12 +60,12 @@
 
 
         <h2>
-            <p>Nous allons maintenant vous présenter notre équipe de wilder. <br>Pour plus d'informations sur chacun
-                d'entre eux, veuillez cliquer sur l'une des cartes ci-dessous.</p>
+            Nous allons maintenant vous présenter notre équipe de wilder. <br>Pour plus d'informations sur chacun
+            d'entre eux, veuillez cliquer sur l'une des cartes ci-dessous.
         </h2>
 
 
-        <section class="cards">
+        <section class="cards" id="wilder">
 
 
             <div class="card">
@@ -80,7 +82,7 @@
 
             <div class="card">
                 <div class="front">
-                    <img class="picture" src="https://picsum.photos/id/23/200/300" alt="#">
+                    <img class="picture" src="https://i.postimg.cc/tTWD4N8M/JL.jpg" alt="#">
                     <h3>Jean-Louis</h3>
                 </div>
                 <div class="back">
@@ -117,23 +119,28 @@
 
         <button class="add-card">Ajouter votre carte !</button>
 
-        <article> Explication pour créer une carte : <br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
-            Voluptatum numquam dolorem ea deserunt dicta magni, ut, tempore atque a eum. <br>
-            Temporibus fugiat delectus perspiciatis sunt iusto suscipit id maxime eius?
+        <article id="explanations"> Vous souhaitez ajouter votre propre carte ?<br>
+            Pour cela, il vous suffit de cliquer sur le bouton ci-dessus et d'ajouter les informations que vous
+            souhaitez. Par exemple vos loisirs (Tortue Ninja, dinosaures, etc...), vos objectifs professionnelles, vous
+            pouvez aussi parler de vos
+            mauvaises experience avec PHP ou d'autre langages défectueux.
         </article>
     </main>
 
 
     <footer>
-        <ul>
-            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
-            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
-            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
-            <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png"> <a href="#"></a> </li>
-        </ul>
-
-
+        <section id="contact">
+            <ul>
+                <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png" alt="etoile1"> <a
+                        href="#"></a> </li>
+                <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png" alt="etoile2"> <a
+                        href="#"></a> </li>
+                <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png" alt="etoile3"> <a
+                        href="#"></a> </li>
+                <li> <img class="star" src="https://pngimg.com/uploads/star/star_PNG41462.png" alt="etoile4"> <a
+                        href="#"></a> </li>
+            </ul>
+        </section>
     </footer>
     <script src="script.js"></script>
 </body>
