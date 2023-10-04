@@ -316,6 +316,7 @@ h2 {
   text-shadow: -1px 1px 7px rgb(252, 235, 0);
   box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 /* Explications Fonctionement carte  */
