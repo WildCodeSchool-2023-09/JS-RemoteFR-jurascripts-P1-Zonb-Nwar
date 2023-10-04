@@ -14,7 +14,7 @@
 
         <nav id="main-menu">
             <ul>
-                <li><a href="#home">Acceuil</a></li>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#wilder">Les Wilders</a></li>
                 <li><a href="#explanations">En savoir +</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,7 +36,15 @@
         <div class="overlay"></div>
 
         <h1 id="home">Book des Wilders </h1>
-        <button id="theme-btn">Dark-Mode</button>
+        
+        <div class="wrapper">
+            <label id="darkmode-toggle" for="toggle-checkbox">
+                <span class="visually-hidden">Enable dark mode</span>
+                <input type="checkbox" id="toggle-checkbox" />
+                <span class="toggle-slider" aria-hidden="true"></span>
+            </label>
+        </div>
+        
         <button class="connexion" onClick="alertUser('Vous ne pouvez pas vous connecter, il faut créer un compte !')">
             <div>
                 <img class="login"
@@ -69,14 +77,10 @@
                 <div class="back">
                     <h3>Hello les Piou Piou !</h3>
                     <p> Calypso, 34 ans en formation à la Wild Code School.
-                        Je fais partie de la 'JuraScrîpt', un groupe intrépide d'apprentis codeurs explorant les
-                        contrées mystérieuses du développement web et mobile.
+                        Je fais partie de la 'JuraScrîpt', un groupe intrépide d'apprentis codeurs.
                         Armée de mon clavier et d'une tasse de café, je me prépare à dompter les dinosaures du code. 🦖
-                        Notre formateur, un véritable Ninja du code, chaque session est aussi palpitante que les
-                        aventures des Tortues Ninja,
-                        à une exception près : pas de pizzas à l'horizon !
-                        Peut-être qu'un jour je créerai un site web pour les dinosaures perdus dans le code,
-                        ou une application mobile pour les Tortues Ninja affamées de pizza ! 🍕😄"
+                        Avec notre formateur, Ninja du code, chaque session est aussi palpitante que les
+                        aventures des Tortues Ninja, à une exception près : pas de pizzas à l'horizon ! 🍕😄
                     </p>
                 </div>
             </div>
@@ -89,15 +93,11 @@
                 </div>
                 <div class="back">
                     <h3>Salut les Lapinous !</h3>
-                    <p> Mon petit nom de Lapinou c'est Jean Louis, 32 ans et mes 2 dents.
-                        Passionner par l'Apéro, la fiesta, le rugby, les jeux vidéo et surtout l'informatique.
-                        Lors de mon chemin au sein de la Wild Code School pour ma
-                        reconversion professionnelle, j'ai eu le plaisir d'entrer dans le JuraScript et d'être formé par
-                        le grand maitre Splinter en personne.
-                        Grâce aux nombreuses heures passés avec le groupe DENVER
-                        le dino, j'ai appris à collaborer, à innover, à prendre des décisions cruciales et acquérir les
-                        connaissances suffisantes pour le succès de ma formation et ma future réalisation de mes
-                        projets.
+                    <p> Lapinou : Jean Louis, 32 ans, 2 dents. Passionné par l'Apéro, la fiesta, le rugby, les jeux vidéo et l'informatique. 
+                        Au sein de la Wild Code School, je suis entré dans le JuraScript formé par le grand maitre Splinter. 
+                        Grâce aux nombreuses heures passés avec le groupe DENVER le dino,
+                        je suis prêt pour le succès de ma formation et de mes projets. 🚀🦖
+                        <br>
                         <br>
                         Astèr Nou artrouv !
                     </p>
@@ -112,8 +112,12 @@
                     <h3>Alexis</h3>
                 </div>
                 <div class="back">
-                    <h3>My Back Text</h3>
-                    <p> Description ...</p>
+                    <h3>Egun on lagunak !</h3>
+                    <p> Moi c'est Alexis, j'ai 32 ans, lorsque je ne suis pas plongé dans les méandres du développement web, 
+                        je m'évade dans mon mini-atelier, m'occupant de vélos, au gré des réglages.
+                        Autrement j'aime le théâtre (mon premier métier), le sport et les chiens !
+                        Car après tout, la vie sans eux, c'est comme un site sans CSS : fade et sans relief ! 💻🔧🎭🐾
+                        Ah oui et bientôt je pense accrocher un poster de dinosaure portant des lunettes dans mon salon ! 🦖❤️</p>
                 </div>
             </div>
 
