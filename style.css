@@ -314,7 +314,7 @@ h2 {
 }
 
 .front {
-
+  border-radius: 0.5rem;
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
@@ -328,6 +328,7 @@ h2 {
 
 
 .back {
+  border-radius: 0.5rem;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -395,8 +396,8 @@ footer li {
 }
 
 .star {
-
-  width: 60%;
+  margin-right: 1rem;
+  height: 3rem;
 }
 
 #main-menu {
@@ -407,16 +408,47 @@ footer li {
   display: inline;
 }
 
+.starcontainer {
+  display: flex;
+  position: relative;
+}
+
+.letter {
+  position: absolute;
+  top: 30%;
+  left: 29%;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.picture {
+  height: 60%;
+  width: 60%;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+div p {
+  display: flex;
+  text-align: center;
+}
 
 /* responsive */
 
 
 @media screen and (min-width:750px) {
 
+  .letter {
+    left: 23%;
+  }
+
   .star {
     height: 3rem;
-    width: 70%;
+    cursor: pointer;
+    margin-right: 2rem;
   }
+
 
   h1 {
     margin-left: 5rem;
@@ -443,6 +475,7 @@ footer li {
     align-items: center;
     font-size: 2rem;
     padding: 1rem;
+    cursor: pointer;
   }
 
   article {
