@@ -12,12 +12,11 @@ body {
 /* Header */
 
 header {
-  display: flex;
-  align-items: center;
-  gap: 1%;
   background-color: #3fb5ec;
-  padding: 1%;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
 }
 
 /* Titre principal   */
@@ -27,75 +26,22 @@ h1 {
   font-size: 2rem;
   text-shadow: -1px 1px 7px rgb(252, 235, 0);
   text-align: center;
-  width: 50%;
-  margin: -1;
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
 }
-
 
 /* menu burger */
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  background: black;
-  z-index: auto;
-}
-
-#main-menu {
-  display: block;
-  height: 3rem;
-  width: 30vw;
-  background: #ec3f95;
-  margin: 0px;
-  z-index: 9;
-  border-radius: 0.5rem;
-
-}
-
-#main-menu ul {
-  width: 30vw;
-  height: 5vh;
-  margin: 0px auto;
-  padding: 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 9;
-}
-
-#main-menu li {
-  list-style-type: none;
-  font-size: 2rem;
-}
-
-#main-menu a {
-  color: #B9FAF8;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-#main-menu a:hover {
-  text-decoration: underline;
-}
 
 #hamburger-input {
   display: none;
 }
 
 #hamburger-menu {
-  width: 50px;
-  height: 50px;
-  display: none;
-  border: none;
-  padding: 0px;
-  margin: 0px;
+  width: 2.5rem;
+  height: 2.5rem;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  margin: auto;
   font-family: 'Cabin', Sans-serif;
   background: linear-gradient(to bottom,
       #ec3f95, #ec3f95 20%,
@@ -106,16 +52,15 @@ h1 {
   z-index: 10;
 }
 
-
 #hamburger-menu #sidebar-menu {
   position: absolute;
   top: 0;
   left: -250px;
   width: 200px;
-  height: 72%;
+  height: 100%;
   background-color: #ec3f95;
   transition: 0.3s;
-  padding: 0px 10px;
+  padding: 3%;
   box-sizing: border-box;
   z-index: 8;
 }
@@ -127,13 +72,12 @@ h5 {
 
 #hamburger-menu h5 {
   color: #B9FAF8;
-  font-size: 3rem;
-  padding-left: 1.rem;
+  font-size: 2rem;
 
 }
 
 #hamburger-menu ul {
-  padding-left: 3.5rem;
+  padding-left: 1rem;
 }
 
 #hamburger-menu li {
@@ -161,18 +105,19 @@ h5 {
   opacity: 0.4;
 }
 
-
-header li {
-  list-style-type: none;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background: black;
+  z-index: auto;
 }
-
-header ul li a {
-
-  text-decoration: none;
-  color: black;
-}
-
-
 
 /* BOUTON SWITCH DARK MODE */
 
@@ -184,10 +129,10 @@ header ul li a {
 }
 
 .wrapper {
-  display: flex;
-  height: 10rem;
-  align-items: center;
-  justify-content: center;
+  padding: 0%;
+  grid-column: 4 / 5;
+  grid-row: 1;
+  margin: auto;
 }
 
 .darkmode-toggle:focus-within .toggle-slider {
@@ -250,7 +195,6 @@ header ul li a {
 
 }
 
-
 /* bouton connexion  */
 
 header .connexion {
@@ -258,7 +202,11 @@ header .connexion {
   width: 2rem;
   height: 2rem;
   background-color: lightblue;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
   margin: auto;
+  padding: 0%;
+
 }
 
 header .login {
@@ -269,7 +217,6 @@ header .login {
 
 /* MAIN */
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -277,8 +224,7 @@ main {
 
 }
 
-/* Titre */
-
+/* Texte d'acceuil */
 
 h2 {
   text-align: center;
@@ -287,11 +233,12 @@ h2 {
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
-  margin-top: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
 }
 
-/* Les cartes des membres  */
-
+/* Conteneur des cartes  */
 
 .cards {
   display: flex;
@@ -301,15 +248,17 @@ h2 {
   justify-content: center;
 }
 
-/* Toutes les cartes  */
+/* chacune des cartes  */
+
 .card {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 15rem;
+  height: 20rem;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
   box-shadow: 0 0 1rem 0 #17132C;
   border-radius: 0.5rem;
+  cursor: pointer;
 
 }
 
@@ -325,7 +274,6 @@ h2 {
   align-items: center;
   box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
 }
-
 
 .back {
   border-radius: 0.5rem;
@@ -349,19 +297,25 @@ h2 {
 
 /* Bouton d'ajout de carte  */
 
+.lien404 {
+  text-decoration: none;
+
+}
+
 .add-card {
-  width: 50vw;
-  height: 10vh;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  color: rgb(255, 0, 255);
-  font-size: 5vw;
   background-color: #3fb5ec;
+  color: rgb(255, 0, 255);
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  place-content: center;
+  padding: 4%;
+  width: 45%;
+  height: 20%;
   text-shadow: -1px 1px 7px rgb(252, 235, 0);
   box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
   border-radius: 1rem;
-  font-family: 'Cabin', Sans-serif;
 }
 
 /* Explications Fonctionement carte  */
@@ -374,8 +328,10 @@ article {
   font-weight: bold;
   border-radius: 1rem;
   margin: auto;
-  margin-top: 10%;
-  margin-bottom: 40%;
+  margin-top: 20%;
+  margin-bottom: 30%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 
@@ -391,7 +347,6 @@ footer ul {
 }
 
 footer li {
-
   list-style-type: none;
 }
 
@@ -439,19 +394,28 @@ div p {
 
 @media screen and (min-width:750px) {
 
-  .letter {
-    left: 23%;
+
+  /* HEADER */
+
+  header {
+    background-color: #3fb5ec;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
   }
 
-  .star {
-    height: 3rem;
-    cursor: pointer;
-    margin-right: 2rem;
+  #hamburger-menu {
+    display: none;
   }
 
+  /* titre principal */
 
   h1 {
-    margin-left: 5rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    place-items: center;
+    margin: auto;
   }
 
   h2 {
@@ -462,28 +426,58 @@ div p {
     margin-bottom: 2rem;
   }
 
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
+  /* Menu classique */
+
+
+  #main-menu {
+    display: block;
+    height: 3rem;
+    width: 30vw;
+    background: #ec3f95;
+    margin: 0px;
+    z-index: 9;
+    border-radius: 0.5rem;
+
   }
 
-  .add-card {
+  #main-menu ul {
+    width: 30vw;
+    height: 5vh;
+    margin: 0px auto;
+    padding: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    font-size: 2rem;
-    padding: 1rem;
-    cursor: pointer;
+    z-index: 9;
   }
 
-  article {
-    padding: 1rem;
-    margin: 5rem;
-    max-width: 90%;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+  #main-menu li {
+    list-style-type: none;
+    font-size: 2rem;
+  }
+
+  #main-menu a {
+    color: #B9FAF8;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  #main-menu a:hover {
+    text-decoration: underline;
+  }
+
+  header li {
+    list-style-type: none;
+  }
+
+  header ul li a {
+
+    text-decoration: none;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   /* BOUTON SWITCH DARK MODE */
@@ -496,10 +490,8 @@ div p {
   }
 
   .wrapper {
-    display: flex;
-    height: 10rem;
-    align-items: center;
-    justify-content: center;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 
   .darkmode-toggle:focus-within .toggle-slider {
@@ -560,6 +552,97 @@ div p {
     white-space: nowrap;
     position: absolute;
 
+  }
+
+
+  /* Bouton Connexion */
+
+  header .connexion {
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    background-color: lightblue;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: auto;
+    padding: 0%;
+
+  }
+
+
+  /* MAIN */
+
+  /* Texte d'acceuil */
+
+  h2 {
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+
+  /* Conteneur Cartes */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  /* chacune des Cartes */
+
+  .card {
+    position: relative;
+    gap: 5%;
+    width: 20rem;
+    height: 26rem;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    box-shadow: 0 0 1rem 0 #17132C;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+  }
+
+  /* bouton d'ajout carte */
+
+  .lien404 {
+    text-decoration: none;
+  }
+
+  .add-card {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    width: 30vw;
+    height: 10vh;
+    margin: auto;
+    color: rgb(255, 0, 255);
+    font-size: 1.7rem;
+    background-color: #3fb5ec;
+    text-shadow: -1px 1px 7px rgb(252, 235, 0);
+    box-shadow: 26px -11px 106px 20px rgba(216, 240, 4, 0.81);
+    border-radius: 1rem;
+  }
+
+  /* Explications Fonctionement carte  */
+
+  article {
+    margin-top: 6%;
+    margin-bottom: 8%;
+  }
+
+
+  /* footer */
+
+  .letter {
+    left: 23%;
+  }
+
+  .star {
+    height: 3rem;
+    cursor: pointer;
+    margin-right: 2rem;
   }
 
 }
