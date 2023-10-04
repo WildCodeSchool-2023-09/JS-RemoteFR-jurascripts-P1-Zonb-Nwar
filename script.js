@@ -14,5 +14,5 @@ const alertUser = (text) => {
 if (window.location.pathname === "/second.html") {
     setTimeout(function () {
         window.location.href = "/index.html"; // Remplacez "/" par l'URL de votre page principale
-    }, 60000);
+    }, 5000);
 }
