@@ -38,3 +38,23 @@ toggleCheckbox.addEventListener('change', function () {
         body.classList.remove(dark_theme_class);
     }
 });
+
+
+/* BOUTON RETOUR EN HAUT */
+
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.querySelector(".back-to-top");
+
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    });
+
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
