@@ -1,3 +1,6 @@
+
+/* EFFET FLIP CARD */
+
 const cards = document.querySelectorAll(".card")
 
 cards.forEach((card) => {
@@ -5,39 +8,33 @@ cards.forEach((card) => {
         card.classList.toggle("flipCard")
     }
 })
+
+/* POP-UP LOGIN */
 const alertUser = (text) => {
     alert(text)
 
 }
 
+/* PAGE 404 */
 
 if (window.location.pathname === "/second.html") {
     setTimeout(function () {
-        window.location.href = "/index.html"; // Remplacez "/" par l'URL de votre page principale
+        window.location.href = "/index.html";
     }, 5000);
 }
-const toggle_btn = document.getElementById('theme-btn');
 
-const body = document.getElementsByTagName('body')[0];
+/* FONCTION SWITCH DARK MODE */
+
+const toggleCheckbox = document.getElementById('toggle-checkbox');
+
+const body = document.body;
 
 const dark_theme_class = 'dark';
 
-
-
-toggle_btn.addEventListener('click', function () {
-
-    if (body.classList.contains(dark_theme_class)) {
-
-
-
-        body.classList.remove(dark_theme_class);
-
-    }
-
-    else {
-
+toggleCheckbox.addEventListener('change', function () {
+    if (this.checked) {
         body.classList.add(dark_theme_class);
-
+    } else {
+        body.classList.remove(dark_theme_class);
     }
-
 });
