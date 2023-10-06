@@ -19,7 +19,7 @@ const alertUser = (text) => {
 
 if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/404.html") {
     setTimeout(function () {
-        window.location.replace("https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/");
+         windows.history.back();
     }, 5000);
 }
 
