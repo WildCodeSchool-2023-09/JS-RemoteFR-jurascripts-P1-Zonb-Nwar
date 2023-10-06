@@ -1,4 +1,3 @@
-
 /* EFFET FLIP CARD */
 
 const cards = document.querySelectorAll(".card")
@@ -19,7 +18,7 @@ const alertUser = (text) => {
 
 if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/404.html") {
     setTimeout(function () {
-         windows.history.back();
+        window.location.href = "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/";
     }, 5000);
 }
 
@@ -31,14 +30,14 @@ const body = document.body;
 
 const dark_theme_class = 'dark';
 
-if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/") {toggleCheckbox.addEventListener('change', function () {
+toggleCheckbox.addEventListener('change', function () {
     if (this.checked) {
         body.classList.add(dark_theme_class);
     } else {
         body.classList.remove(dark_theme_class);
     }
 });
-      }
+
 
 /* BOUTON RETOUR EN HAUT */
 
@@ -53,10 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/") { button.addEventListener("click", function(event) {
+    button.addEventListener("click", function(event) {
         event.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-         }                                                                                                               
 });
-
