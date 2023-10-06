@@ -53,8 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    button.addEventListener("click", function(event) {
+    if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/") { button.addEventListener("click", function(event) {
         event.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+         }                                                                                                               
 });
+
