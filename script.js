@@ -17,7 +17,7 @@ const alertUser = (text) => {
 
 /* PAGE 404 */
 
-if (window.location.pathname === "/404.html") {
+if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/404.html") {
     setTimeout(function () {
         window.location.href = "/index.html";
     }, 5000);
