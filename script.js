@@ -31,14 +31,14 @@ const body = document.body;
 
 const dark_theme_class = 'dark';
 
-toggleCheckbox.addEventListener('change', function () {
+if (window.location.pathname === "https://wildcodeschool-2023-09.github.io/JS-RemoteFR-jurascripts-P1-Zonb-Nwar/") {toggleCheckbox.addEventListener('change', function () {
     if (this.checked) {
         body.classList.add(dark_theme_class);
     } else {
         body.classList.remove(dark_theme_class);
     }
 });
-
+      }
 
 /* BOUTON RETOUR EN HAUT */
 
